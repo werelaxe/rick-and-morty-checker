@@ -4,6 +4,8 @@ import datetime
 from flask import Flask, render_template
 import time
 
+from flask import url_for
+
 app = Flask(__name__)
 table = ""
 last_update_time = ""
@@ -38,3 +40,5 @@ def statistics():
     global table
     update_table()
     return render_template("table.html", table=table)
+
+
